@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library of Congress Search Engine</title>
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/styles.css"
-</head>
-<body>
-    <h1>Hello</h1>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+      <div class="d-flex align-items-center justify-content-center example vh-100">
+          <div class="col-12 col-md-9 hello example d-flex flex-column align-items-center">
+              <h1 class="">Library of Congress Search Engine</h1>
+            <form class="col-12">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="search-term"
+                    placeholder="Search"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <select class="custom-select" id="inputGroupSelect02">
+                    <option selected>Select a format...</option>
+                    <option value="1">Maps</option>
+                    <option value="2">Audio</option>
+                    <option value="3">Photos</option>
+                    <option value="4">Manuscripts</option>
+                    <option value="5">Newspapers</option>
+                    <option value="6">Film and Videos</option>
+                    <option value="7">Notated Music</option>
+                    <option value="8">Websites</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary col-12">Submit</button>
+              </form>
+          </div>
+      </div>
+    
+    <div></div>
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>
