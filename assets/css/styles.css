@@ -1,13 +1,26 @@
-* {
-    background-color: #546a7b;
+:root {
+    --bg: #546a7b;
+    --light-blue: #62929e
 }
 
-p {
-    background-color: #62929e;
+body {
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/assets/imgs/congress-library.jpg");
+    
+    
+}
+
+h1{
+    font-family: 'Domine', serif;
+    font-size: 4rem;
+    color: white;
+}
+
+form {
+    background-color: var(--light-blue);
 }
 
 .example {
-    border: solid red 3px;
+    border-radius: 0;
 }
 
 .hello {
