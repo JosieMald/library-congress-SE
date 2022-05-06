@@ -15,15 +15,12 @@ h1{
     color: white;
 }
 
-form {
-    background-color: var(--light-blue);
-}
 
 .example {
-    border-radius: 0;
+    border: solid red 1px;
 }
 
 .hello {
     padding: 1rem;
-    background-color: #62929e;
+    background-color: rgba(0, 0, 0, 0.88);
 }
