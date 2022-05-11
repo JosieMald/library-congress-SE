@@ -17,6 +17,11 @@ h1 {
 .hello {
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.88);
+    border: 2px  black solid;
+}
+
+.dataResults {
+    color: white;
 }
 
 #submitBtn {
@@ -26,6 +31,7 @@ h1 {
 }
 
 #backBtn {
+    color: white;
     background-color: #C02F1D;
     border: 3px solid #C02F1D;
 }
