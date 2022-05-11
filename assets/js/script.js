@@ -16,15 +16,19 @@ var formatInputEl = $('#format-input');
 
 $("#submitBtn").on("click", function (event) {
     event.preventDefault();
-    console.log("clicked");
+    // console.log("clicked");
     searchTermEl = searchTermEl.val();
     formatInputEl = formatInputEl.val();
-    console.log(searchTermEl);
-    console.log(formatInputEl);
-    var format = 'maps';
-    var requestUrl = 'https://www.loc.gov/' + format + '/?q=' + searchTermEl + '&fo=json';
+    var requestUrl = 'https://www.loc.gov/' + formatInputEl + '/?q=' + searchTermEl + '&fo=json';
     console.log(requestUrl);
-    
+
+    fetch(requestUrl)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+    })
 });
 
 
