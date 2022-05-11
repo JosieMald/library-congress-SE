@@ -1,3 +1,31 @@
+body {
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/assets/imgs/congress-library.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.example {
+    border: solid red 1px;
+}
+
 h1 {
-    color: red;
+    font-family: 'Domine', serif;
+    font-size: 3rem;
+    color: white;
+}
+
+.hello {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.88);
+}
+
+#submitBtn {
+    color: white;
+    background-color: #1496BB;
+    border: 3px solid #1496BB;
+}
+
+#backBtn {
+    background-color: #C02F1D;
+    border: 3px solid #C02F1D;
 }

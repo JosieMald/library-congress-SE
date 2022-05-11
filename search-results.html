@@ -26,7 +26,40 @@
    <link rel="stylesheet" href="./assets/css/results-page.css" />
 </head>
 <body>
-    <h1>Hello</h1>
+    <aside class="vh-100 col-3 hello">
+        <!-- <div> -->
+          <form class="col-12 p-2">
+              <h1 class="col-12">Library of <br> Congress <br> Search Engine</h1>
+                <div class="form-group col-12">
+                  <input
+                    type="text"
+                    class="form-control rounded-2"
+                    id="search-term"
+                    placeholder="Search"
+                  />
+                </div>
+                <div class="input-group mb-3 col-12">
+                  <select class="custom-select rounded-2" id="format-input">
+                    <option selected>Select a format...</option>
+                    <option value="maps">Maps</option>
+                    <option value="audio">Audio</option>
+                    <option value="photos">Photos</option>
+                    <option value="manuscripts">Manuscripts</option>
+                    <option value="newspapers">Newspapers</option>
+                    <option value="film-and-videos">Film and Videos</option>
+                    <option value="notated-music">Notated Music</option>
+                    <option value="websites">Websites</option>
+                  </select>
+                </div>
+                <div class="col-12 d-flex flex-column justify-content-center">
+                  <button type="submit" class="btn col-12 mb-3" id="submitBtn">Search</button>
+                  <button type="submit" class="btn btn-primary col-12" id="backBtn">&#8592; Go Back</button>
+                </div>
+              </form>
+
+        <!-- </div> -->
+
+    </aside>
     <script src="./assets/js/search-results.js"></script>
 </body>
 </html>
