@@ -26,8 +26,7 @@ $("#submitBtn").on("click", function (event) {
     }
     // var requestUrl = 'https://www.loc.gov/' + formatInput + '/?q=' + searchTerm + '&fo=json&c=10';
     var queryParameters = 'q=' + searchTerm + '&format=' + formatInput
-    // /search-results.html?q=dogs&format=
-    console.log(queryParameters);
+    // console.log(queryParameters);
 
     // fetch(requestUrl)
     // .then(function(response){

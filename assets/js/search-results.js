@@ -16,16 +16,21 @@ var getApiCall = function (format, search) {
     "https://www.loc.gov/" + format + "/?q=" + search + "&fo=json&c=10";
 
   fetch(apiUrl).then(function (response) {
+      console.log(response)
     if (response.ok) {
       response.json().then(function (data) {
         displayData(data);
       });
-    }
-  });
+    } 
+});
 };
 
 var displayData = function (data) {
-    $('.showResults').text("Showing results for " + data.search.query)
+    if (data.results.length == 0) {
+       $('.showResults').text("No results found for  " + data.search.query)
+    } else {
+        $('.showResults').text("Showing results for " + data.search.query)
+    }
     for (var i = 0; i < data.results.length; i++) {
         $('.dataContainer').append(
             "<div class='m-4 col-12 w-auto hello'>" +
@@ -35,6 +40,7 @@ var displayData = function (data) {
         '<p> Description: ' + data.results[i].description + '</p>' +
         "<a class='btn btn-dark mb-3' href='" + data.results[i].url + "' target='_blank' > Read More </a>" + '</div>')
     }
+    console.log(data)
 };
 
 // EVENT LISTENERS
@@ -56,4 +62,4 @@ $("#backBtn").on("click", function (event) {
   location.replace("index.html");
 });
 
-// getQueryString();
+getQueryString();
