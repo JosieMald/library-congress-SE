@@ -1,4 +1,7 @@
 var containerEl = $('.dataContainer');
+var searchTermEl = $('#search-term');
+var formatInputEl = $('#format-input');
+var submitBtnEl = $('#submitBtn');
 
 
 var getQueryString = function () {
@@ -32,9 +35,20 @@ var displayData = function (data) {
         '<p> Description: ' + data.results[i].description + '</p>' +
         "<a class='btn btn-dark mb-3' href='" + data.results[i].url + "' target='_blank' > Read More </a>" + '</div>')
     }
-  console.log(data);
-  console.log(data.search.query);
 };
+
+// EVENT LISTENERS
+
+$("#submitBtn").on("click", function (event) {
+    event.preventDefault();
+    searchTerm = searchTermEl.val().trim();
+    formatInput = formatInputEl.val().trim();
+    if(searchTerm === ''){
+        alert('Please enter a search term');
+    }
+    var queryParameters = 'q=' + searchTerm + '&format=' + formatInput
+    location.replace('search-results.html?' + queryParameters);
+});
 
 $("#backBtn").on("click", function (event) {
   event.preventDefault();
@@ -42,4 +56,4 @@ $("#backBtn").on("click", function (event) {
   location.replace("index.html");
 });
 
-getQueryString();
+// getQueryString();
