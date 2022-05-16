@@ -30,7 +30,7 @@ var displayData = function (data) {
         '<p> Date: ' + data.results[i].date + '</p>' +
         '<p> Subject: ' + data.results[i].subject[0] + '</p>' +
         '<p> Description: ' + data.results[i].description + '</p>' +
-        "<button type='button' class='btn btn-dark mb-3 read-more'> Read More </button>" + '</div>')
+        "<a class='btn btn-dark mb-3' href='" + data.results[i].url + "' target='_blank' > Read More </a>" + '</div>')
     }
   console.log(data);
   console.log(data.search.query);
