@@ -33,7 +33,7 @@ var displayData = function (data) {
     }
     for (var i = 0; i < data.results.length; i++) {
         $('.dataContainer').append(
-            "<div class='m-4 col-12 w-auto hello'>" +
+            "<div class='m-4 col-12 w-auto box'>" +
         '<h2>' + data.results[i].title + '</h2>' +
         '<p> Date: ' + data.results[i].date + '</p>' +
         '<p> Subject: ' + data.results[i].subject[0] + '</p>' +

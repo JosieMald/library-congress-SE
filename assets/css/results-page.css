@@ -4,17 +4,13 @@ body {
     background-size: cover;  
 }
 
-.example {
-    border: solid red 1px;
-}
-
 h1 {
     font-family: 'Domine', serif;
     font-size: 3rem;
     color: white;
 }
 
-.hello {
+.box {
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.88);
     border: 2px  black solid;
