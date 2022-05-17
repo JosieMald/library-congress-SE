@@ -1,9 +1,10 @@
+// DOM ELEMENTS -----------------------------------------------------------------------------
 var containerEl = $('.dataContainer');
 var searchTermEl = $('#search-term');
 var formatInputEl = $('#format-input');
 var submitBtnEl = $('#submitBtn');
 
-
+// FUNCTION CALLS ---------------------------------------------------------------------------
 var getQueryString = function () {
   var queryString = document.location.search;
   var queryFormat = queryString.split("=")[2];
@@ -12,11 +13,14 @@ var getQueryString = function () {
 };
 
 var getApiCall = function (format, search) {
+  if (format == 'Select a format...') {
+    format = 'newspapers'
+  }
   var apiUrl =
     "https://www.loc.gov/" + format + "/?q=" + search + "&fo=json&c=10";
 
+
   fetch(apiUrl).then(function (response) {
-      console.log(response)
     if (response.ok) {
       response.json().then(function (data) {
         displayData(data);
@@ -40,7 +44,6 @@ var displayData = function (data) {
         '<p> Description: ' + data.results[i].description + '</p>' +
         "<a class='btn btn-dark mb-3' href='" + data.results[i].url + "' target='_blank' > Read More </a>" + '</div>')
     }
-    console.log(data)
 };
 
 // EVENT LISTENERS
@@ -51,6 +54,9 @@ $("#submitBtn").on("click", function (event) {
     formatInput = formatInputEl.val().trim();
     if(searchTerm === ''){
         alert('Please enter a search term');
+    }
+    if (formatInput == 'Select a format...') {
+      formatInput = 'newspapers'
     }
     var queryParameters = 'q=' + searchTerm + '&format=' + formatInput
     location.replace('search-results.html?' + queryParameters);
