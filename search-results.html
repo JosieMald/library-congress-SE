@@ -31,13 +31,9 @@
   </head>
   <body>
     <div class="row">
-      <aside class="vh-100 col-3 box">
+      <aside class="h-auto col-12 col-md-3 box">
         <form class="col-12 p-2">
-          <h1 class="col-12">
-            Library of <br />
-            Congress <br />
-            Search Engine
-          </h1>
+          <h1 class="col-12 col-md-10">Library of Congress Search Engine</h1>
           <div class="form-group col-12">
             <input
               type="text"
@@ -69,14 +65,17 @@
           </div>
         </form>
       </aside>
-      <main class="w-auto col-9 dataResults">
+      <main class="w-auto col-12 col-md-9 dataResults">
         <h1 class="m-4 showResults">Searching library please wait...</h1>
         <div class="loading"></div>
-        <div class="dataContainer">
-        </div>
+        <div class="dataContainer"></div>
       </main>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/search-results.js"></script>
   </body>
 </html>
