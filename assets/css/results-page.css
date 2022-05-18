@@ -12,10 +12,6 @@ h1 {
   color: white;
 }
 
-aside {
-  height: 100vh;
-}
-
 /* CLASS SELECTORS */
 .box {
   padding: 1rem;
