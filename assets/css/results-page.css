@@ -1,3 +1,4 @@
+/* ELEMENT SELECTORS */
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../imgs/congress-library.jpg");
@@ -11,14 +12,15 @@ h1 {
   color: white;
 }
 
+aside {
+  height: 100vh;
+}
+
+/* CLASS SELECTORS */
 .box {
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.88);
   border: 2px black solid;
-}
-
-.ex {
-    border: 1px solid red;
 }
 
 .dataResults {
@@ -46,12 +48,7 @@ h1 {
   animation: loading 1s linear infinite;
 }
 
-@keyframes loading {
-    to {
-        transform: rotate(1turn);
-    }
-}
-
+/* ID SELECTORS */
 #submitBtn {
   color: white;
   background-color: #1496bb;
@@ -64,9 +61,20 @@ h1 {
   border: 3px solid #c02f1d;
 }
 
+/* MEDIA QUERIES AND KEY FRAMES */
 @media screen and (max-width: 600px) {
-  h1, h2 {
-      font-size: 1rem;
-      font-weight: bolder;
+  h1,
+  h2 {
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+  aside {
+    height: 45vh;
+  }
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
   }
 }
