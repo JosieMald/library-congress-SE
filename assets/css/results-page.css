@@ -1,33 +1,65 @@
 body {
-    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../imgs/congress-library.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;  
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../imgs/congress-library.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
-    font-family: 'Domine', serif;
-    font-size: 3rem;
-    color: white;
+  font-family: "Domine", serif;
+  font-size: 3rem;
+  color: white;
 }
 
 .box {
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.88);
-    border: 2px  black solid;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.88);
+  border: 2px black solid;
+}
+
+.ex {
+    border: 1px solid red;
 }
 
 .dataResults {
-    color: white;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 40%;
+}
+
+.loading::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 10px solid rgba(255, 255, 255, 0.4);
+  border-top-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(1turn);
+    }
 }
 
 #submitBtn {
-    color: white;
-    background-color: #1496BB;
-    border: 3px solid #1496BB;
+  color: white;
+  background-color: #1496bb;
+  border: 3px solid #1496bb;
 }
 
 #backBtn {
-    color: white;
-    background-color: #C02F1D;
-    border: 3px solid #C02F1D;
+  color: white;
+  background-color: #c02f1d;
+  border: 3px solid #c02f1d;
 }
